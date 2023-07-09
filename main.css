@@ -3,35 +3,106 @@
 }
 .div1{
     display: flex;
-    width: 600px;
-    height: 200px;
+    /* width: 1200px; */
+    height: 100px;
+    background-color: white;
     justify-content: space-between;
 }
-.div2{
+#container{
     display: flex;
-    width: 600px;
-    height: 100px;
     background-color: blue;
-}
-.box4{
-    display: inline-flex;
-    justify-content: space-around;
-    color: white;
-}
-.box2{
-}
-.div3{
-    display: flex;
-    width: 400px;
-    height: 500px;
-    background-color: white;
-    flex-direction: row;
-}
-.div4{
-    display: flex;
-    width: 200px;
-    height: 500px;
+     /* width: 70%; */
+    /* height: 100px; */
 }
 .item{
-    border: 1px dashed;
+    display: flex;
+    width: 70%;
+    align-items: center;
 }
+.box1{
+    display: inline;
+    margin: 0 15px;
+    color: white;
+    list-style: none;
+}
+.box3{
+    display: flex;
+    width: 30%;
+    align-items: center;
+
+}
+.box2{
+    background-color: green;
+    color: white;
+}
+#item2{
+    background-color: blue;
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+#mind{
+    display: flex;
+}
+.mind1{
+    width: 70%;
+    height: 350px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.mind2{
+    width: 30%; 
+    height: 350px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.inbox{
+    /* width: 70%; */
+    height: 340px;
+    border: dashed;
+    margin: 5px 10px 10px 10px;
+    border-radius: 5px;
+}
+.inbox2{
+    /* width: 30%; */
+    height: 340px;
+    border: dashed;
+    margin: 5px 10px 10px 10px;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 576px) {
+    #container{
+        flex-direction: column;
+    }
+    .item{
+        flex-direction: column;
+        align-items: start;
+    }
+    #mind{
+        flex-direction: column;
+    }
+    .mind1{
+        width: 100%;
+    }
+    .mind2{
+        width: 100%;
+    }
+    .box1{
+        margin: 8px 0px;
+    }
+    .box2{
+        margin-left: 40px;
+        display: flex;
+        width: 100%;
+        margin-right: 40px;
+    }
+    .box3 {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+} 
