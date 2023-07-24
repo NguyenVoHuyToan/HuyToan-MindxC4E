@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bt5_2.css" />
+  </head>
+  <body>
+    <div id="superbox">
+      <div id="container1">
+        <ul class="item">
+          <li class="item2">
+            <img
+              src="https://haycafe.vn/wp-content/uploads/2022/08/Hinh-anh-rong-con.jpg"
+              width="100"
+            />
+          </li>
+          <li class="item1" onclick="secondText('Dashboard')">Dashboard</li>
+          <li class="item1" onclick="secondText('Team')">Team</li>
+          <li class="item1" onclick="secondText('Project')">Project</li>
+          <li class="item1" onclick="secondText('Calender')">Calender</li>
+          <li class="item1" onclick="secondText('Document')">Document</li>
+        </ul>
+        <ul class="item">
+          <li class="item2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYsoKP5eg5oJ4PlDrbNEFGPWG-9A5w3VDYRQqj3_jQyWGYz6kff_uDdUXHeFgiiXqtUYw&usqp=CAU"
+              width="100"
+            />
+          </li>
+        </ul>
+      </div>
+      <div id="container2">
+        <div class="box1">
+          <input class="box2" type="password" placeholder="Search" id="searchBox" />
+        </div>
+        <div class="box3">
+          <h2 class="insert">Dashboard</h2>
+          <div id="box4"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      //CAU 1
+      function secondText(value) {
+        const fisrtTex = document.getElementsByClassName("insert")[0];
+        fisrtTex.innerHTML = value;
+      }
+      //CAU 2
+      const myInput = document.getElementById("searchBox");
+      myInput.addEventListener("change", function (e) {
+        console.log(e.target.value);
+        let takeElement = document.getElementById("box4");
+        takeElement.innerHTML = e.target.value
+      });
+    </script>
+  </body>
+</html>

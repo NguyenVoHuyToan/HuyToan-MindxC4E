@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bt5.css">
+</head>
+
+<body>
+    <div class="div1">
+        <img
+            src="https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/31170938/image-300-hinh-nen-dien-thoai-cute-ngau-cuc-dep-duoc-tai-nhieu-166718577899764.jpg">
+        <img src="https://khafa.org.vn/wp-content/uploads/2022/01/ve-hinh-cute-don-gian-600x600-1.jpg">
+    </div>
+    <hr>
+    <br>
+    <div>
+        <div id="container">
+            <ul class="item">
+                <li class="box1" id="home" onclick="homeClick()">Home</li>
+                <li class="box1" id="profile" onclick="profileClick()">Profile</li>
+                <li class="box1">Resource</li>
+                <li class="box1">Company Directory</li>
+                <li class="box1">Openings</li>
+            </ul>
+            <div class="box3">
+                <input class="box2" id="searchBox" type="text" value="Search">
+            </div>
+        </div>
+        <div id="mind">
+            <div class="mind1">
+                <div class="inbox" id="left">
+                </div>
+            </div>
+            <div class="mind2">
+                <div class="inbox2" id="right">
+                </div>
+            </div>
+        </div>
+        <script>
+            //cau 1
+            function profileClick() {
+                const leftOne = document.getElementById("left");
+                leftOne.style.backgroundColor = "#2F80ED"
+                const listSucces = ["Monthly Active Users Sending Invites", "Invitees per Inviter", "Conversion Rate to New User", "Conversion Rate to New Guest", "Conversion Rate to New Host", "Revenue Impact Potential"];
+                const newSpan = document.createElement("span")
+                newSpan.setAttribute("id", "span1")
+                newSpan.innerHTML = "Success metrics"
+                leftOne.appendChild(newSpan)
+                const newUl = document.createElement("ul");
+                newUl.setAttribute("id", "ul2")
+                for (let i = 0; i < listSucces.length; i++) {
+                    const newLi = document.createElement("li");
+                    newLi.innerHTML = listSucces[i];
+                    newUl.appendChild(newLi);
+                }
+                leftOne.appendChild(newUl)
+            }
+            function homeClick() {
+                const leftTwo = document.getElementById("left");
+                leftTwo.style.backgroundColor = "white"
+                const idSpan = document.getElementById("span1")
+                leftTwo.removeChild(idSpan)
+                const idUl = document.getElementById("ul2")
+                leftTwo.removeChild(idUl)
+            }
+            //cau 2
+            const myInput = document.getElementById("searchBox");
+            myInput.addEventListener("change", function (e) {
+                console.log(e.target.value);
+                const secondSpan = document.createElement("span");
+                secondSpan.innerHTML = "";
+                secondSpan.innerHTML = e.target.value;
+                secondSpan.style.color = "#2474E5"
+                let takeElement = document.getElementById("right");
+                takeElement.appendChild(secondSpan)
+                let newArray = ["#F4A4A4", "#fff0d6", "#141414"];
+                const numRandom = Math.floor(Math.random() * 3);
+                newArray[numRandom]
+                takeElement.style.backgroundColor=newArray[numRandom]
+            });
+        </script>
+</body>
+
+</html>
