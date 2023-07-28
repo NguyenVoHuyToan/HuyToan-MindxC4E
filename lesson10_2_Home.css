@@ -53,4 +53,5 @@
 }
 #change{
     display: none;
+    justify-content: end;
 }
