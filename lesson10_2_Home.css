@@ -51,3 +51,6 @@
     display: flex;
     margin-left: 1000px;
 }
+#change{
+    display: none;
+}

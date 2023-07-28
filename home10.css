@@ -89,3 +89,7 @@
     padding-left:1100px;
     color: blue;
 }
+#endText{
+    display: none;
+    justify-content: center;
+}

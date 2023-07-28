@@ -41,6 +41,7 @@
       <div id="button">
         <button id="clickbutton">Guess</button>
       </div>
+      <div id="endText">Bạn đã hết lượt</div>
     </div>
     <script>
         setTimeout(myFunction,1000)
@@ -112,9 +113,12 @@
                 document.getElementById("text3").innerHTML = numberDown--;
             }else{
                 document.getElementById("text3").innerHTML = 0;
+                document.getElementById("endText").style.display = "flex";
+                document.getElementById("clickbutton").style.display = "none";
             }
             if(inText === "comtam"){
                 alert('Đáp án chính xác');
+                document.getElementById("clickbutton").style.display = "none";
             }else{
                 alert('Thử lại');
             }
