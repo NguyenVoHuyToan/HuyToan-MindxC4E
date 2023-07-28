@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+ }
+#powerbox{
+    height: 500px;
+    background-color: aquamarine;
+    padding-top: 10px;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    width: 250px;
+    height: 50px;
+    margin-left: 500px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#texti{
+    display: flex;
+    justify-content: center;
+}
+#countclick{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+#text1{
+    display: flex;
+    justify-content: center;
+    padding-right: 5px;
+}
+#text3{
+    display: flex;
+    color: red;
+}
+#text4{
+    padding-left: 5px;
+}
+#text2{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+#input1{
+    display: flex;
+    justify-content: center;
+}
+#input{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+#button{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+#settime{
+    display: flex;
+}
+#dongho{
+    display: flex;
+    color: red;
+}
+#timeleft{
+    display: flex;
+    padding-left:1100px;
+    color: blue;
+}

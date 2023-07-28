@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="home10.css" />
+    <script src="https://kit.fontawesome.com/4cc7250a7a.js"></script>
+  </head>
+  <body>
+    <div id="powerbox">
+        <div id="settime">
+            <span id="timeleft">Time Left:</span>
+            <div id="dongho">
+            </div>
+        </div>
+        <div id="heading">
+            <i class="fa-solid fa-star"></i>
+            <span>Guess the wolrd</span>
+            <i class="fa-solid fa-star"></i>
+        </div>
+      <h6 id="text">Start your game by typing to the input below</h6>
+      <div id="container">
+        <div class="box" onclick="newClick('*')">*</div>
+        <div class="box" onclick="new1Click('O')">*</div>
+        <div class="box" onclick="new2Click('*')">*</div>
+        <div class="box" onclick="new3Click('T')">*</div>
+        <div class="box" onclick="new4Click('*')">*</div>
+        <div class="box" onclick="new5Click('M')">*</div>
+      </div>
+      <i id="texti">Hint: Do an tot vao buoi sang</i>
+      <div id="countclick">
+        <div id="text1">You have</div>
+        <div id="text3"></div>
+        <div id="text4">guess remaining</div>
+      </div>
+      <div id="text2">Type on letter</div>
+      <div id="input">
+        <input type="text" id="input1" />
+      </div>
+      <div id="button">
+        <button id="clickbutton">Guess</button>
+      </div>
+    </div>
+    <script>
+        setTimeout(myFunction,1000)
+        function myFunction(){
+            alert('Bạn có 1 phút để tìm ra đáp án đúng. Bắt đầu nào')
+        }
+        //
+        function newClick(value){
+          let oneClick = document.getElementsByClassName("box")[0];
+            oneClick.innerHTML = value;
+        }
+        function new1Click(value){
+            let twoClick = document.getElementsByClassName('box')[1]
+            twoClick.innerHTML = value;
+
+        }
+        function new2Click(value){
+            let threeClick = document.getElementsByClassName('box')[2]
+            threeClick.innerHTML = value;
+
+        }
+        function new3Click(value){
+            let fourClick = document.getElementsByClassName('box')[3]
+            fourClick.innerHTML = value;
+
+        }
+        function new4Click(value){
+            let fiveClick = document.getElementsByClassName('box')[4]
+            fiveClick.innerHTML = value;
+
+        }
+        function new5Click(value){
+            let sixClick = document.getElementsByClassName('box')[5]
+            sixClick.innerHTML = value;
+        }
+        //
+        let numberBreak = 60;
+        function demNguoc(){
+            numberBreak--;
+            if(numberBreak != 0){
+                document.getElementById("dongho").innerHTML = numberBreak;
+                setTimeout("demNguoc()", 1000)
+            }else{
+                document.getElementById("dongho").innerHTML = "Hết giờ "
+                alert('Bạn thua rồi')
+            }
+        }
+        demNguoc();
+        //
+        let numberDown = 3;
+        function demSoLuotClick(){
+            if(numberDown != 0){
+                document.getElementById("text3").innerHTML = numberDown--;
+            }else{
+                document.getElementById("text3").innerHTML = 0;
+            }
+        }
+        demSoLuotClick();
+        //
+        let typeText = document.getElementById("input1")
+        let inText = "";
+        typeText.addEventListener("change", function(e){
+            console.log(e.target.value);
+            inText = e.target.value
+        });
+        let oneClick = document.getElementById("clickbutton")
+        oneClick.addEventListener("click", function(e){
+            if(numberDown != 0){
+                document.getElementById("text3").innerHTML = numberDown--;
+            }else{
+                document.getElementById("text3").innerHTML = 0;
+            }
+            if(inText === "comtam"){
+                alert('Đáp án chính xác');
+            }else{
+                alert('Thử lại');
+            }
+        })
+        
+
+    </script>
+  </body>
+</html>
