@@ -4,47 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="home10_game.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://kit.fontawesome.com/4cc7250a7a.js"></script>
+    <style>
+        .container{
+            background-color: aquamarine;
+            margin-top: 20px;
+            height: 350px;
+        }
+
+        #text{
+            margin-top: 20px;
+        }
+
+        #text1{
+            margin-top: 20px;
+        }
+        #click{
+            margin-top: 20px;
+        }
+
+        #timer{
+            margin-top: 20px;
+        }
+
+        #user_guess_remain{
+            margin: 0 5px 0 5px;
+        }
+    </style>
   </head>
   <body>
-    <div id="powerbox">
-      <header>
-        <h3 id="heading">⭐Guess the words⭐</h3>
-      </header>
-      <section>
-        <p id="text">Star your game by typing to the input below</p>
-        <div class="answer_input" id="answer_input_blocks"></div>
-        <div class="answer_hint">
-          <em id="answer_hint_content"> Hint: ... </em>
-        </div>
-        <div class="space"></div>
-        <div class="user_guess">
-          <p id="text1">
-            You have <span id="user_guess_remain">0</span> guess(es) wrong
-          </p>
-          <form action="" method="post" id="guess_form" class="user_guess_form">
-            <div class="input_group">
-              <label for="user_guess_input">Type one letter</label>
-              <input
-                type="text"
-                class="user_guess_form_input answer_input_block"
-                id="user_guess_input"
-              />
+    <div class="container">
+        <header class="d-flex justify-content-center">
+            <div class="border border-black">
+                <h3 id="heading">⭐Guess the words⭐</h3>
             </div>
-            <div id="noteclick">
-                <button id="click">Guess</button></div>
-          </form>
-        </div>
-      </section>
-      <div class="time_remain">
-        <p id="text5">
-          Time left: <span id="time_left" class="timeLeft">0</span>s
-        </p>
-      </div>
+          </header>
+          <section>
+            <p class="d-flex justify-content-center" id="text">Star your game by typing to the input below</p>
+            <div class="d-flex justify-content-center">
+                <div class="answer_input" id="answer_input_blocks"></div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <em id="answer_hint_content"> Hint: ... </em>
+            </div>
+            <div class="space"></div>
+            <div class="user_guess">
+              <p class="d-flex justify-content-center" id="text1">
+                You have <span id="user_guess_remain">0</span> guess(es) wrong
+              </p>
+              <form action="" method="post" id="guess_form" class="user_guess_form">
+                <div class="text-center">
+                  <label for="user_guess_input">Type one letter</label>
+                  <input
+                    type="text"
+                    class="user_guess_form_input answer_input_block"
+                    id="user_guess_input"
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button id="click">Guess</button></div>
+              </form>
+            </div>
+          </section>
+          <div class="d-flex justify-content-center">
+            <p id="timer">
+              Time left: <span id="time_left" class="timeLeft">0</span>s
     </div>
     <script>
-      const tipAnswer = [
+           const tipAnswer = [
       {
       words: "Elephent",
       hint: "which's animal have big ears?",

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+#powerbox {
+  height: 500px;
+  background-color: aquamarine;
+  padding-top: 10px;
+}
+
+#heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+  width: 250px;
+  height: 50px;
+  margin-left: 500px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#text{
+  display: flex;
+  justify-content: center;
+}
+#answer_input_blocks{
+  display: flex;
+  justify-content: center;
+}
+
+.answer_input{
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+#answer_hint_content {
+  display: flex;
+  justify-content: center;
+}
+
+#text1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+#user_guess_remain {
+  display: flex;
+  justify-content: center;
+  padding: 0 5px 0 5px;
+}
+
+ .input_group {
+  display: flex;
+  justify-content: center;
+  padding-top: 0 5px;
+} 
+
+#click{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+
+#noteclick{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#text5{
+  display: flex;
+  justify-content: center;
+}
+
+#time_left{
+  display: flex;
+  justify-content: center;
+  color: blue;
+}
+
+/* #endText {
+  display: none;
+  justify-content: center;
+} */
+
+/* body {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #word-container {
+    margin: 20px 0;
+  }
+  
+  #guess-container {
+    margin-bottom: 20px;
+  }
+  
+  #guess-input {
+    padding: 5px;
+  }
+  
+  #remaining-container, #timer-container {
+    margin-bottom: 20px;
+  }
+  
+  #remaining-count, #timer {
+    font-weight: bold;
+  } */
