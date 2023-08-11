@@ -19,6 +19,7 @@ for (let i = 0; i < nameTab.length; i++) {
     newBox.push(nameTab[i][j])
   }
 }
+//vòng lặp sắp xếp thứ tự tăng dần
 for(let i = 0; i < newBox.length; i++){
     for(let j = 0; j< newBox.length-1; j++){
         if(newBox[j+1].score < newBox[j].score){
